@@ -90,7 +90,7 @@ function MainPage() {
                 </Spotlight>
                 <CategoryContainer>
                     <CategoryTop>
-                        <CategoryText></CategoryText>
+                        <CategoryText>Category</CategoryText>
                         <SeeAllTxt>See All</SeeAllTxt>
                     </CategoryTop>
                     <CategoryBottom>
@@ -98,36 +98,36 @@ function MainPage() {
                             <CategoryImage>
                                 <CategoryImg />
                             </CategoryImage>
-                            <CategoryName></CategoryName>
-                            <Count></Count>
+                            <CategoryName>Social</CategoryName>
+                            <Count>134+</Count>
                         </CategorySelection>
                         <CategorySelection>
                             <CategoryImage>
                                 <CategoryImg />
                             </CategoryImage>
-                            <CategoryName></CategoryName>
-                            <Count></Count>
+                            <CategoryName>Travel</CategoryName>
+                            <Count>243+</Count>
                         </CategorySelection>
                         <CategorySelection>
                             <CategoryImage>
                                 <CategoryImg />
                             </CategoryImage>
-                            <CategoryName></CategoryName>
-                            <Count></Count>
+                            <CategoryName>Insight</CategoryName>
+                            <Count>150+</Count>
                         </CategorySelection>
                         <CategorySelection>
                             <CategoryImage>
                                 <CategoryImg />
                             </CategoryImage>
-                            <CategoryName></CategoryName>
-                            <Count></Count>
+                            <CategoryName>Profession</CategoryName>
+                            <Count>120+</Count>
                         </CategorySelection>
                         <CategorySelection>
                             <CategoryImage>
                                 <CategoryImg />
                             </CategoryImage>
-                            <CategoryName></CategoryName>
-                            <Count></Count>
+                            <CategoryName>Sport</CategoryName>
+                            <Count>321+</Count>
                         </CategorySelection>
                     </CategoryBottom>
                 </CategoryContainer>
