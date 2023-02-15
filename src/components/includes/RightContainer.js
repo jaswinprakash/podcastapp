@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import MusicBg from "../../assets/images/Frame3466913.png";
 
 function RightContainer() {
     return (
@@ -165,7 +166,11 @@ function RightContainer() {
                             />
                         </ControlImage>
                     </MainControls>
-                    <SeekBar></SeekBar>
+                    <SeekBar>
+                        <RunningTime>02:00</RunningTime>
+
+                        <TotalDuration>03:40</TotalDuration>
+                    </SeekBar>
                 </MusicControls>
             </RightBottom>
         </RightSection>
@@ -266,16 +271,30 @@ const FollowBtn = styled.button`
     padding: 5px 10px;
 `;
 
-const RightBottom = styled.div``;
+const RightBottom = styled.div`
+    background: url(${MusicBg}) no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+`;
 
 const MusicHeading = styled.h3`
     font-size: 25px;
     font-weight: 700;
+    color: #fff;
+    width: 80%;
+    padding: 20px;
 `;
-const MusicControls = styled.div``;
+const MusicControls = styled.div`
+    background: rgba(217, 217, 217, 0.5);
+    width: 100%;
+    height: 100px;
+    margin-top:10px;
+`;
 const MainControls = styled.ul`
     display: flex;
     justify-content: space-between;
+    width: 60%;
+    margin: 0 auto 20px;
 `;
 const ControlImage = styled.li`
     width: 20px;
@@ -284,4 +303,18 @@ const ControlImg = styled.img`
     display: block;
     width: 100%;
 `;
-const SeekBar = styled.div``;
+
+const SeekBar = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+`;
+
+const RunningTime = styled.h3`
+    font-size: 12px;
+    color: #fff;
+`;
+const TotalDuration = styled.h3`
+    font-size: 12px;
+    color: #fff;
+`;

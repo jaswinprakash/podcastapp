@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // images
-// import BgImg from "../../assets/images/Frame 3466911.png";
+import BgImg from "../../assets/images/Frame3466911.png";
 
 function MiddleContainer() {
     return (
@@ -190,11 +190,13 @@ export default MiddleContainer;
 
 const MiddleSection = styled.div`
     width: 70%;
+    padding: 30px 20px ;
 `;
 const Heading = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 `;
 
 const MainTitle = styled.h1`
@@ -222,13 +224,18 @@ const SearchImg = styled.img`
 const Spotlight = styled.div`
     display: flex;
     justify-content: space-between;
-    background: url("../../assets/images/919628.jpg") no-repeat;
+    background: url(${BgImg}) no-repeat;
+    background-size: cover;
+    padding: 20px;
 `;
 
 const LeftContent = styled.div``;
 const MainText = styled.h2`
     font-size: 40px;
     font-weight: 700;
+    color: #fff;
+    width: 80%;
+    margin-bottom: 100px;
 `;
 
 const BottomElement = styled.div`
@@ -237,7 +244,7 @@ const BottomElement = styled.div`
     width: 40%;
 `;
 const Playing = styled.div`
-    background: #d9d9d9;
+    background: rgba(217, 217, 217, 0.5);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -259,7 +266,7 @@ const PlayingImg = styled.img`
 `;
 
 const PlayLater = styled.div`
-    background: #d9d9d9;
+    background: rgba(217, 217, 217, 0.5);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -285,7 +292,7 @@ const RightContent = styled.div`
     justify-content: space-between;
     align-items: center;
     border-radius: 50px;
-    background: #d9d9d9;
+    background: rgba(217, 217, 217, 0.5);
     width: 230px;
     height: 60px;
     padding: 0 20px;
@@ -307,13 +314,14 @@ const SpotProfName = styled.h4`
 `;
 const SpotFollowers = styled.h5`
     font-size: 12px;
-    color: #a6a5a5;
+    color: #d9d9d9;
 `;
 const SpotFollowBtn = styled.button`
     background: #eaeaea;
     border-radius: 50px;
     padding: 4px 10px;
     color: #9e9696;
+    font-weight: 500;
 `;
 
 const CategoryContainer = styled.div``;
