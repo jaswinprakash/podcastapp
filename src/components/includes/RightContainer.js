@@ -176,16 +176,25 @@ export default RightContainer;
 
 const RightSection = styled.div`
     width: 20%;
+    border-left: 1px solid #a6a5a5;
+    padding: 35px 20px 0;
 `;
 
 const RightTop = styled.div``;
 const FriendList = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #a6a5a5;
 `;
-const FriendListTxt = styled.h2``;
+const FriendListTxt = styled.h2`
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+`;
 const OptionsMenu = styled.div`
-    width: 50px;
+    width: 35px;
+    margin-bottom: 20px;
 `;
 const OptionsImg = styled.img`
     width: 100%;
@@ -194,45 +203,75 @@ const OptionsImg = styled.img`
 const FriendProfile = styled.ul`
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `;
-const FriendProfList = styled.li``;
+const FriendProfList = styled.li`
+    margin: 10px 0 20px;
+`;
 const FriendProfImage = styled.div`
-    width: 50px;
+    width: 40px;
 `;
 const FriendProfImg = styled.img`
     width: 100%;
     display: flex;
+    border-radius: 50%;
 `;
-const FriendProfName = styled.h5``;
+const FriendProfName = styled.h5`
+    font-size: 12px;
+    color: #a6a5a5;
+    text-align: center;
+`;
 
 const RightMiddle = styled.div``;
 
-const PodcastHeading = styled.h2``;
-const PodcastList = styled.ul``;
+const PodcastHeading = styled.h2`
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+`;
+const PodcastList = styled.ul`
+    border-top: 1px solid #a6a5a5;
+`;
 const ProfileDetails = styled.li`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 `;
 const LeftDiv = styled.div`
     display: flex;
     align-items: center;
 `;
 const LeftImage = styled.div`
-    width: 50px;
+    width: 38px;
+    margin-right: 10px;
 `;
 const LeftImg = styled.img`
     width: 100%;
     display: block;
+    border-radius: 50%;
 `;
 const ProfDetails = styled.div``;
-const ProfName = styled.h4``;
-const FollowCount = styled.h5``;
-const FollowBtn = styled.button``;
+const ProfName = styled.h4`
+    font-size: 14px;
+    font-weight: 500;
+`;
+const FollowCount = styled.h5`
+    font-size: 11px;
+    color: #9e9696;
+`;
+const FollowBtn = styled.button`
+    border-radius: 50px;
+    border: 1px solid #9e9696;
+    padding: 5px 10px;
+`;
 
 const RightBottom = styled.div``;
 
-const MusicHeading = styled.h3``;
+const MusicHeading = styled.h3`
+    font-size: 25px;
+    font-weight: 700;
+`;
 const MusicControls = styled.div``;
 const MainControls = styled.ul`
     display: flex;

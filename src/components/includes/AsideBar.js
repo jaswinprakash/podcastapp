@@ -1,48 +1,59 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 function AsideBar() {
     return (
         <LeftContainer>
             <SidBarContents>
-                <SideBarImg
-                    src={
-                        require("../../assets/images/Property 1=home.svg")
-                            .default
-                    }
-                />
+                <NavLinks to={"/"}>
+                    <SideBarImg
+                        src={
+                            require("../../assets/images/Property 1=home.svg")
+                                .default
+                        }
+                    />
+                </NavLinks>
             </SidBarContents>
             <SidBarContents>
-                <SideBarImg
-                    src={
-                        require("../../assets/images/Property 1=music.svg")
-                            .default
-                    }
-                />
+                <NavLinks to={"music/"}>
+                    <SideBarImg
+                        src={
+                            require("../../assets/images/Property 1=music.svg")
+                                .default
+                        }
+                    />
+                </NavLinks>
             </SidBarContents>
             <SidBarContents>
-                <SideBarImg
-                    src={
-                        require("../../assets/images/Property 1=account.svg")
-                            .default
-                    }
-                />
+                <NavLinks to={"account/"}>
+                    <SideBarImg
+                        src={
+                            require("../../assets/images/Property 1=account.svg")
+                                .default
+                        }
+                    />
+                </NavLinks>
             </SidBarContents>
             <SidBarContents>
-                <SideBarImg
-                    src={
-                        require("../../assets/images/Property 1=file.svg")
-                            .default
-                    }
-                />
+                <NavLinks to={"file/"}>
+                    <SideBarImg
+                        src={
+                            require("../../assets/images/Property 1=file.svg")
+                                .default
+                        }
+                    />
+                </NavLinks>
             </SidBarContents>
             <SidBarContents>
-                <SideBarImg
-                    src={
-                        require("../../assets/images/Property 1=settings.svg")
-                            .default
-                    }
-                />
+                <NavLinks to={"settings/"}>
+                    <SideBarImg
+                        src={
+                            require("../../assets/images/Property 1=settings.svg")
+                                .default
+                        }
+                    />
+                </NavLinks>
             </SidBarContents>
         </LeftContainer>
     );
@@ -55,14 +66,13 @@ const LeftContainer = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid #D9D9D9;
-
+    border-right: 1px solid #d9d9d9;
 `;
 
 const SidBarContents = styled.li`
     width: 35px;
     margin-bottom: 30px;
-    &&:first-child{
+    &&:first-child {
         margin-top: 40px;
     }
 `;
@@ -70,3 +80,4 @@ const SideBarImg = styled.img`
     display: block;
     width: 100%;
 `;
+const NavLinks = styled(NavLink)``;

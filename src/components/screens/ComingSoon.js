@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 function ComingSoon() {
-    return <ComingSoon>ComingSoon</ComingSoon>;
+    return <Coming>ComingSoon</Coming>;
 }
 
 export default ComingSoon;
 
-const ComingSoon = styled.h1`
+const Coming = styled.h1`
     text-align: center;
     margin: 0 auto;
 `;

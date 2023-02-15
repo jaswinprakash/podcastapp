@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// images
+// import BgImg from "../../assets/images/Frame 3466911.png";
+
 function MiddleContainer() {
     return (
         <MiddleSection>
@@ -219,7 +222,7 @@ const SearchImg = styled.img`
 const Spotlight = styled.div`
     display: flex;
     justify-content: space-between;
-    background: url("../../assets/images/Frame 3466911.png");
+    background: url("../../assets/images/919628.jpg") no-repeat;
 `;
 
 const LeftContent = styled.div``;
