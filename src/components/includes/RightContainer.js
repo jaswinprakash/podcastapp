@@ -288,7 +288,8 @@ const MusicControls = styled.div`
     background: rgba(217, 217, 217, 0.5);
     width: 100%;
     height: 100px;
-    margin-top:10px;
+    padding-top: 35px;
+    margin-top: 45px;
 `;
 const MainControls = styled.ul`
     display: flex;
@@ -297,7 +298,7 @@ const MainControls = styled.ul`
     margin: 0 auto 20px;
 `;
 const ControlImage = styled.li`
-    width: 20px;
+    width: 25px;
 `;
 const ControlImg = styled.img`
     display: block;

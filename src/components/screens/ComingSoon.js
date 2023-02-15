@@ -9,5 +9,6 @@ export default ComingSoon;
 
 const Coming = styled.h1`
     text-align: center;
-    margin: 0 auto;
+    margin: auto;
+    font-weight: 700;
 `;

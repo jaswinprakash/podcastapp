@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// images
 import BgImg from "../../assets/images/Frame3466911.png";
 
 function MiddleContainer() {
@@ -144,44 +143,88 @@ function MiddleContainer() {
                 <PopularTxt>Most popular</PopularTxt>
                 <SeeAllTxt>See All</SeeAllTxt>
             </PopularTop>
-            <PopularBottom>
-                <PopProfileArea>
-                    <SerialNum>01</SerialNum>
-                    <PopularProfile>
-                        <PopProfImg
-                            src={require("../../assets/images/Frame 3466917.png")}
-                        />
-                    </PopularProfile>
-                    <ArtistDetails>
-                        <PopularPlay>How to be a productive person</PopularPlay>
-                        <PopArtist>Johnson alert</PopArtist>
-                    </ArtistDetails>
-                </PopProfileArea>
-                <PopCountArea>
-                    <CountAreaLeft>
-                        <PopSound>
-                            <PopSoundImg
-                                src={
-                                    require("../../assets/images/Property 1=sound.svg")
-                                        .default
-                                }
+            <PopularBottomList>
+                <PopularBottom>
+                    <PopProfileArea>
+                        <SerialNum>01</SerialNum>
+                        <PopularProfile>
+                            <PopProfImg
+                                src={require("../../assets/images/Frame 3466917.png")}
                             />
-                        </PopSound>
-                        <PopFollow>100,045</PopFollow>
-                    </CountAreaLeft>
-                    <CountAreaRight>
-                        <PopTimer>
-                            <PopTimerImg
-                                src={
-                                    require("../../assets/images/Property 1=alarm.svg")
-                                        .default
-                                }
+                        </PopularProfile>
+                        <ArtistDetails>
+                            <PopularPlay>
+                                How to be a productive person
+                            </PopularPlay>
+                            <PopArtist>Johnson alert</PopArtist>
+                        </ArtistDetails>
+                    </PopProfileArea>
+                    <PopCountArea>
+                        <CountAreaLeft>
+                            <PopSound>
+                                <PopSoundImg
+                                    src={
+                                        require("../../assets/images/Property 1=sound.svg")
+                                            .default
+                                    }
+                                />
+                            </PopSound>
+                            <PopFollow>100,045</PopFollow>
+                        </CountAreaLeft>
+                        <CountAreaRight>
+                            <PopTimer>
+                                <PopTimerImg
+                                    src={
+                                        require("../../assets/images/Property 1=alarm.svg")
+                                            .default
+                                    }
+                                />
+                            </PopTimer>
+                            <Duration>04:30</Duration>
+                        </CountAreaRight>
+                    </PopCountArea>
+                </PopularBottom>
+                <PopularBottom>
+                    <PopProfileArea>
+                        <SerialNum>02</SerialNum>
+                        <PopularProfile>
+                            <PopProfImg
+                                src={require("../../assets/images/Frame 3466915.png")}
                             />
-                        </PopTimer>
-                        <Duration>04:30</Duration>
-                    </CountAreaRight>
-                </PopCountArea>
-            </PopularBottom>
+                        </PopularProfile>
+                        <ArtistDetails>
+                            <PopularPlay>
+                                How to be a productive person
+                            </PopularPlay>
+                            <PopArtist>Gabriel adim</PopArtist>
+                        </ArtistDetails>
+                    </PopProfileArea>
+                    <PopCountArea>
+                        <CountAreaLeft>
+                            <PopSound>
+                                <PopSoundImg
+                                    src={
+                                        require("../../assets/images/Property 1=sound.svg")
+                                            .default
+                                    }
+                                />
+                            </PopSound>
+                            <PopFollow>900,000</PopFollow>
+                        </CountAreaLeft>
+                        <CountAreaRight>
+                            <PopTimer>
+                                <PopTimerImg
+                                    src={
+                                        require("../../assets/images/Property 1=alarm.svg")
+                                            .default
+                                    }
+                                />
+                            </PopTimer>
+                            <Duration>03:40</Duration>
+                        </CountAreaRight>
+                    </PopCountArea>
+                </PopularBottom>
+            </PopularBottomList>
         </MiddleSection>
     );
 }
@@ -190,7 +233,7 @@ export default MiddleContainer;
 
 const MiddleSection = styled.div`
     width: 70%;
-    padding: 30px 20px ;
+    padding: 30px 20px;
 `;
 const Heading = styled.div`
     display: flex;
@@ -386,10 +429,13 @@ const PopularTxt = styled.h2`
     font-weight: 500;
     margin-bottom: 20px;
 `;
-const PopularBottom = styled.div`
+
+const PopularBottomList = styled.ul``;
+const PopularBottom = styled.li`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 `;
 
 const ArtistDetails = styled.div``;
