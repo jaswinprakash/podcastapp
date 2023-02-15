@@ -6,7 +6,10 @@ function AsideBar() {
     return (
         <LeftContainer>
             <SidBarContents>
-                <NavLinks to={"/"}>
+                <NavLinks
+                    to={"/"}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                >
                     <SideBarImg
                         src={
                             require("../../assets/images/Property 1=home.svg")
@@ -16,7 +19,10 @@ function AsideBar() {
                 </NavLinks>
             </SidBarContents>
             <SidBarContents>
-                <NavLinks to={"music/"}>
+                <NavLinks
+                    to={"music/"}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                >
                     <SideBarImg
                         src={
                             require("../../assets/images/Property 1=music.svg")
@@ -26,7 +32,10 @@ function AsideBar() {
                 </NavLinks>
             </SidBarContents>
             <SidBarContents>
-                <NavLinks to={"account/"}>
+                <NavLinks
+                    to={"account/"}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                >
                     <SideBarImg
                         src={
                             require("../../assets/images/Property 1=account.svg")
@@ -36,7 +45,10 @@ function AsideBar() {
                 </NavLinks>
             </SidBarContents>
             <SidBarContents>
-                <NavLinks to={"file/"}>
+                <NavLinks
+                    to={"file/"}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                >
                     <SideBarImg
                         src={
                             require("../../assets/images/Property 1=file.svg")
@@ -46,7 +58,10 @@ function AsideBar() {
                 </NavLinks>
             </SidBarContents>
             <SidBarContents>
-                <NavLinks to={"settings/"}>
+                <NavLinks
+                    to={"settings/"}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                >
                     <SideBarImg
                         src={
                             require("../../assets/images/Property 1=settings.svg")

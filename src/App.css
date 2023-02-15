@@ -12,8 +12,13 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    
 }
 
+a.active img {
+    filter: invert()
+    ;
+  }
 @font-face {
     font-family: "DM Sans";
     src: url("./assets/fonts/DMSans-Bold.woff2") format("woff2");

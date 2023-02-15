@@ -256,8 +256,9 @@ const SearchContainer = styled.form`
     width: 300px;
 `;
 const SearchText = styled.input``;
-const SearchLogo = styled.div`
+const SearchLogo = styled.button`
     width: 17px;
+    cursor: pointer;
 `;
 const SearchImg = styled.img`
     display: block;
@@ -294,6 +295,7 @@ const Playing = styled.div`
     padding: 5px 10px;
     border-radius: 50px;
     width: 90px;
+    cursor: pointer;
 `;
 const PlayingText = styled.h4`
     font-size: 14px;
@@ -316,6 +318,7 @@ const PlayLater = styled.div`
     padding: 0 10px;
     border-radius: 50px;
     width: 100px;
+    cursor: pointer;
 `;
 const PlayLaterTxt = styled.h4`
     font-size: 14px;
@@ -343,6 +346,7 @@ const RightContent = styled.div`
 const SpotlightProfileImage = styled.div`
     width: 30px;
     margin-right: 10px;
+    cursor: pointer;
 `;
 const SpotProfImg = styled.img`
     width: 100%;
@@ -365,6 +369,11 @@ const SpotFollowBtn = styled.button`
     padding: 4px 10px;
     color: #9e9696;
     font-weight: 500;
+    cursor: pointer;
+    &:hover {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
 `;
 
 const CategoryContainer = styled.div``;
@@ -384,6 +393,7 @@ const SeeAllTxt = styled.h3`
     font-size: 17px;
     font-weight: 500;
     margin-bottom: 10px;
+    cursor: pointer;
 `;
 
 const CategoryBottom = styled.ul`
@@ -395,6 +405,7 @@ const CategorySelection = styled.li`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 `;
 const CategoryImage = styled.div`
     width: 45px;
@@ -444,6 +455,7 @@ const PopProfileArea = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 27%;
+    cursor: pointer;
 `;
 const SerialNum = styled.h3`
     font-size: 13px;
