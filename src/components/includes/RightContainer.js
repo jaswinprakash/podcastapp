@@ -37,8 +37,8 @@ function RightContainer() {
         setFollowerId(id);
         setFollow(!isFollow);
 
-        console.log(isFollow);
-        console.log(followerId);
+        // console.log(isFollow);
+        // console.log(followerId);
     };
 
     useEffect(() => {
