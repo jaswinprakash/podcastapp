@@ -23,7 +23,6 @@ function MiddleContainer() {
                     <MainText>Listen to the people's voice</MainText>
                     <BottomElement>
                         <Playing>
-                            <PlayingText>playing</PlayingText>
                             <PlayingImage>
                                 <PlayingImg
                                     src={
@@ -32,9 +31,9 @@ function MiddleContainer() {
                                     }
                                 />
                             </PlayingImage>
+                            <PlayingText>playing</PlayingText>
                         </Playing>
                         <PlayLater>
-                            <PlayLaterTxt>play later</PlayLaterTxt>
                             <PlayLaterImage>
                                 <PlayLaterImg
                                     src={
@@ -43,6 +42,7 @@ function MiddleContainer() {
                                     }
                                 />
                             </PlayLaterImage>
+                            <PlayLaterTxt>play later</PlayLaterTxt>
                         </PlayLater>
                     </BottomElement>
                 </LeftContent>
@@ -74,8 +74,10 @@ function MiddleContainer() {
                                 }
                             />
                         </CategoryImage>
-                        <CategoryName>Social</CategoryName>
-                        <Count>134+</Count>
+                        <CategoryDetails>
+                            <CategoryName>Social</CategoryName>
+                            <Count>134+</Count>
+                        </CategoryDetails>
                     </CategorySelection>
                     <CategorySelection>
                         <CategoryImage>
@@ -86,8 +88,10 @@ function MiddleContainer() {
                                 }
                             />
                         </CategoryImage>
-                        <CategoryName>Travel</CategoryName>
-                        <Count>243+</Count>
+                        <CategoryDetails>
+                            <CategoryName>Travel</CategoryName>
+                            <Count>243+</Count>
+                        </CategoryDetails>
                     </CategorySelection>
                     <CategorySelection>
                         <CategoryImage>
@@ -98,8 +102,10 @@ function MiddleContainer() {
                                 }
                             />
                         </CategoryImage>
-                        <CategoryName>Insight</CategoryName>
-                        <Count>150+</Count>
+                        <CategoryDetails>
+                            <CategoryName>Insight</CategoryName>
+                            <Count>150+</Count>
+                        </CategoryDetails>
                     </CategorySelection>
                     <CategorySelection>
                         <CategoryImage>
@@ -110,8 +116,10 @@ function MiddleContainer() {
                                 }
                             />
                         </CategoryImage>
-                        <CategoryName>Profession</CategoryName>
-                        <Count>120+</Count>
+                        <CategoryDetails>
+                            <CategoryName>Profession</CategoryName>
+                            <Count>120+</Count>
+                        </CategoryDetails>
                     </CategorySelection>
                     <CategorySelection>
                         <CategoryImage>
@@ -122,8 +130,10 @@ function MiddleContainer() {
                                 }
                             />
                         </CategoryImage>
-                        <CategoryName>Sport</CategoryName>
-                        <Count>321+</Count>
+                        <CategoryDetails>
+                            <CategoryName>Sport</CategoryName>
+                            <Count>321+</Count>
+                        </CategoryDetails>
                     </CategorySelection>
                 </CategoryBottom>
             </CategoryContainer>
@@ -139,8 +149,10 @@ function MiddleContainer() {
                             src={require("../../assets/images/Frame 3466917.png")}
                         />
                     </PopularProfile>
-                    <PopularPlay>How to be a productive person</PopularPlay>
-                    <PopArtist>Johnson alert</PopArtist>
+                    <ArtistDetails>
+                        <PopularPlay>How to be a productive person</PopularPlay>
+                        <PopArtist>Johnson alert</PopArtist>
+                    </ArtistDetails>
                 </PopProfileArea>
                 <PopCountArea>
                     <CountAreaLeft>
@@ -182,15 +194,22 @@ const Heading = styled.div`
     align-items: center;
 `;
 
-const MainTitle = styled.h1``;
+const MainTitle = styled.h1`
+    font-size: 60px;
+    font-weight: 700;
+`;
 const SearchContainer = styled.form`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid #a6a5a5;
+    border-radius: 50px;
+    padding: 5px 10px;
+    width: 300px;
 `;
 const SearchText = styled.input``;
 const SearchLogo = styled.div`
-    width: 20px;
+    width: 17px;
 `;
 const SearchImg = styled.img`
     display: block;
@@ -200,32 +219,58 @@ const SearchImg = styled.img`
 const Spotlight = styled.div`
     display: flex;
     justify-content: space-between;
-    background: url();
-    background-size: contain;
+    background: url("../../assets/images/Frame 3466911.png");
 `;
 
 const LeftContent = styled.div``;
-const MainText = styled.h2``;
+const MainText = styled.h2`
+    font-size: 40px;
+    font-weight: 700;
+`;
 
 const BottomElement = styled.div`
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 40%;
 `;
-const Playing = styled.div``;
-const PlayingText = styled.h4``;
+const Playing = styled.div`
+    background: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 50px;
+    width: 90px;
+`;
+const PlayingText = styled.h4`
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+`;
 const PlayingImage = styled.div`
-    width: 10px;
+    width: 15px;
 `;
 const PlayingImg = styled.img`
     display: block;
     width: 100%;
 `;
 
-const PlayLater = styled.div``;
-const PlayLaterTxt = styled.h4``;
+const PlayLater = styled.div`
+    background: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 50px;
+    width: 100px;
+`;
+const PlayLaterTxt = styled.h4`
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+`;
 const PlayLaterImage = styled.div`
-    width: 10px;
+    width: 15px;
 `;
 const PlayLaterImg = styled.img`
     display: block;
@@ -236,61 +281,169 @@ const RightContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 50px;
+    background: #d9d9d9;
+    width: 230px;
+    height: 60px;
+    padding: 0 20px;
 `;
 const SpotlightProfileImage = styled.div`
-    width: 50px;
+    width: 30px;
+    margin-right: 10px;
 `;
 const SpotProfImg = styled.img`
     width: 100%;
     display: block;
+    border-radius: 50%;
 `;
 const SpotContents = styled.div``;
-const SpotProfName = styled.h4``;
-const SpotFollowers = styled.h5``;
-const SpotFollowBtn = styled.button``;
+const SpotProfName = styled.h4`
+    font-size: 13px;
+    color: #fff;
+    font-weight: 500;
+`;
+const SpotFollowers = styled.h5`
+    font-size: 12px;
+    color: #a6a5a5;
+`;
+const SpotFollowBtn = styled.button`
+    background: #eaeaea;
+    border-radius: 50px;
+    padding: 4px 10px;
+    color: #9e9696;
+`;
 
 const CategoryContainer = styled.div``;
 
-const CategoryTop = styled.div``;
-const CategoryText = styled.h2``;
-const SeeAllTxt = styled.h3``;
+const CategoryTop = styled.div`
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #9e9696;
+    align-items: flex-end;
+`;
+const CategoryText = styled.h2`
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+`;
+const SeeAllTxt = styled.h3`
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+`;
 
-const CategoryBottom = styled.ul``;
-const CategorySelection = styled.li``;
+const CategoryBottom = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 30px;
+`;
+const CategorySelection = styled.li`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
 const CategoryImage = styled.div`
-    width: 50px;
+    width: 45px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 10px;
 `;
 const CategoryImg = styled.img`
     display: block;
     width: 100%;
 `;
-const CategoryName = styled.h4``;
-const Count = styled.h4``;
+const CategoryDetails = styled.div``;
+const CategoryName = styled.h4`
+    font-size: 14px;
+    font-weight: 500;
+`;
+const Count = styled.h4`
+    font-size: 12px;
+    color: #a6a5a5;
+`;
 
-const PopularTop = styled.div``;
-const PopularTxt = styled.h2``;
-const PopularBottom = styled.div``;
+const PopularTop = styled.div`
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #9e9696;
+    align-items: flex-end;
+    margin-bottom: 20px;
+`;
+const PopularTxt = styled.h2`
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+`;
+const PopularBottom = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
 
-const PopProfileArea = styled.div``;
-const SerialNum = styled.h3``;
+const ArtistDetails = styled.div``;
+const PopProfileArea = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 27%;
+`;
+const SerialNum = styled.h3`
+    font-size: 13px;
+`;
 const PopularProfile = styled.div`
-    width: 50px;
+    width: 40px;
 `;
 const PopProfImg = styled.img`
     display: block;
     width: 100%;
+    border-radius: 50%;
 `;
-const PopularPlay = styled.h4``;
-const PopArtist = styled.h5``;
+const PopularPlay = styled.h4`
+    font-size: 14px;
+    font-weight: 700;
+`;
+const PopArtist = styled.h5`
+    font-size: 12px;
+    color: #a6a5a5;
+`;
 
-const PopCountArea = styled.div``;
+const PopCountArea = styled.div`
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+`;
 
-const CountAreaLeft = styled.div``;
-const PopSound = styled.div``;
-const PopSoundImg = styled.img``;
-const PopFollow = styled.h3``;
+const CountAreaLeft = styled.div`
+    display: flex;
+    align-items: center;
+`;
+const PopSound = styled.div`
+    width: 30px;
+    margin-right: 10px;
+`;
+const PopSoundImg = styled.img`
+    display: block;
+    width: 100%;
+`;
+const PopFollow = styled.h3`
+    font-size: 15px;
+    color: #9e9696;
+`;
 
-const CountAreaRight = styled.div``;
-const PopTimer = styled.div``;
-const PopTimerImg = styled.img``;
-const Duration = styled.h3``;
+const CountAreaRight = styled.div`
+    display: flex;
+    align-items: center;
+`;
+const PopTimer = styled.div`
+    width: 30px;
+    margin-right: 10px;
+`;
+const PopTimerImg = styled.img`
+    display: block;
+    width: 100%;
+`;
+const Duration = styled.h3`
+    font-size: 15px;
+    color: #9e9696;
+`;
