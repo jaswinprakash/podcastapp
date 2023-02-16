@@ -78,10 +78,16 @@ export default AsideBar;
 
 const LeftContainer = styled.ul`
     width: 7%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-right: 1px solid #d9d9d9;
+    @media all and (max-width: 980px) {
+        width: 9%;
+        height: fit-content;
+        border-right: none;
+    }
 `;
 
 const SidBarContents = styled.li`

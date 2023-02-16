@@ -1,26 +1,26 @@
 import "./App.css";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MiddleContainer from "./components/screens/MiddleContainer";
 import AsideBar from "./components/includes/AsideBar";
-import RightContainer from "./components/includes/RightContainer";
 import ComingSoon from "./components/screens/ComingSoon";
+import Home from "./components/screens/Home";
 
 function App() {
     return (
         <>
             <Router>
-                <Container>
+                <MainContainer>
                     <AsideBar />
-                    <Routes>
-                        <Route path="/" element={<MiddleContainer />} />
-                        <Route path="music/" element={<ComingSoon />} />
-                        <Route path="account/" element={<ComingSoon />} />
-                        <Route path="file/" element={<ComingSoon />} />
-                        <Route path="settings/" element={<ComingSoon />} />
-                    </Routes>
-                    <RightContainer />
-                </Container>
+                    <SubContainer>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="music/" element={<ComingSoon />} />
+                            <Route path="account/" element={<ComingSoon />} />
+                            <Route path="file/" element={<ComingSoon />} />
+                            <Route path="settings/" element={<ComingSoon />} />
+                        </Routes>
+                    </SubContainer>
+                </MainContainer>
             </Router>
         </>
     );
@@ -28,8 +28,11 @@ function App() {
 
 export default App;
 
-const Container = styled.div`
+const MainContainer = styled.div`
     display: flex;
     justify-content: space-between;
     height: 100vh;
+`;
+const SubContainer = styled.div`
+    width: 100%;
 `;

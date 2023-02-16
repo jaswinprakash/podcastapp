@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import BgImg from "../../assets/images/Frame3466911.png";
 
 function MiddleContainer() {
@@ -232,8 +231,11 @@ function MiddleContainer() {
 export default MiddleContainer;
 
 const MiddleSection = styled.div`
-    width: 70%;
-    padding: 30px 20px;
+    height: 100vh;
+    padding: 30px 20px 0;
+    @media all and (max-width: 980px) {
+        height: fit-content;
+    }
 `;
 const Heading = styled.div`
     display: flex;
@@ -286,6 +288,12 @@ const BottomElement = styled.div`
     display: flex;
     justify-content: space-between;
     width: 40%;
+    @media all and (max-width: 1280px) {
+        width: 48%;
+    }
+    @media all and (max-width: 1080px) {
+        width: 60%;
+    }
 `;
 const Playing = styled.div`
     background: rgba(217, 217, 217, 0.5);
@@ -342,6 +350,12 @@ const RightContent = styled.div`
     width: 230px;
     height: 60px;
     padding: 0 20px;
+    @media all and (max-width: 1280px) {
+        width: 278px;
+    }
+    @media all and (max-width: 1080px) {
+        width: 327px;
+    }
 `;
 const SpotlightProfileImage = styled.div`
     width: 30px;
@@ -422,6 +436,9 @@ const CategoryDetails = styled.div``;
 const CategoryName = styled.h4`
     font-size: 14px;
     font-weight: 500;
+    @media all and (max-width: 980px) {
+        font-size: 16px;
+    }
 `;
 const Count = styled.h4`
     font-size: 12px;
@@ -456,12 +473,33 @@ const PopProfileArea = styled.div`
     align-items: center;
     width: 27%;
     cursor: pointer;
+    @media all and (max-width: 1440px) {
+        width: 29%;
+    }
+    @media all and (max-width: 1380px) {
+        width: 33%;
+    }
+    @media all and (max-width: 1280px) {
+        width: 40%;
+    }
+    @media all and (max-width: 1080px) {
+        width: 45%;
+    }
+    @media all and (max-width: 980px) {
+        width: 55%;
+    }
 `;
 const SerialNum = styled.h3`
     font-size: 13px;
+    @media all and (max-width: 980px) {
+        font-size: 15px;
+    }
 `;
 const PopularProfile = styled.div`
     width: 40px;
+    @media all and (max-width: 980px) {
+        width: 55px;
+    }
 `;
 const PopProfImg = styled.img`
     display: block;
@@ -471,10 +509,16 @@ const PopProfImg = styled.img`
 const PopularPlay = styled.h4`
     font-size: 14px;
     font-weight: 700;
+    @media all and (max-width: 980px) {
+        font-size: 17px;
+    }
 `;
 const PopArtist = styled.h5`
     font-size: 12px;
     color: #a6a5a5;
+    @media all and (max-width: 980px) {
+        font-size: 15px;
+    }
 `;
 
 const PopCountArea = styled.div`

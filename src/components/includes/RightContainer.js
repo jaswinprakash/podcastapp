@@ -3,59 +3,69 @@ import styled from "styled-components";
 import MusicBg from "../../assets/images/Frame3466913.png";
 
 function RightContainer() {
-    const [isFollow, setFollow] = useState(null);
-    const profile = [
+    const [profile, setProfile] = useState([
         {
             id: 1,
             image: require("../../assets/images/Frame 3466914.png"),
             name: "Jason Albert",
             followers: "200,456",
+            is_followed: false,
         },
         {
             id: 2,
             image: require("../../assets/images/Frame 3466915.png"),
             name: "Gabriel Adim",
             followers: "200,456",
+            is_followed: false,
         },
         {
             id: 3,
             image: require("../../assets/images/Frame 3466916.png"),
             name: "Lordun Sardun",
             followers: "200,456",
+            is_followed: false,
         },
         {
             id: 4,
             image: require("../../assets/images/Frame 3466917.png"),
             name: "Daniel Walied",
             followers: "200,456",
+            is_followed: false,
         },
-    ];
+    ]);
 
-    
-
+    let updateProfile = (item) => {
+        item.is_followed = !item.is_followed;
+        setProfile([...profile]);
+    };
     const renderProfile = () => {
-        return profile.map((item) => (
-            <ProfileDetails key={item.id}>
-                <LeftDiv>
-                    <LeftImage>
-                        <LeftImg src={item.image} />
-                    </LeftImage>
-                    <ProfDetails>
-                        <ProfName>{item.name}</ProfName>
-                        <FollowCount>{item.followers} followers</FollowCount>
-                    </ProfDetails>
-                </LeftDiv>
-                {item.id === isFollow ? (
-                    <FollowBtn onClick={(e) => (e ? setFollow(null) : null)}>
-                        Unfollow
-                    </FollowBtn>
-                ) : (
-                    <FollowBtn onClick={(e) => (e ? setFollow(item.id) : null)}>
-                        Follow
-                    </FollowBtn>
-                )}
-            </ProfileDetails>
-        ));
+        return profile.map((item) => {
+            console.log(item.is_followed);
+            return (
+                <ProfileDetails key={item.id}>
+                    <LeftDiv>
+                        <LeftImage>
+                            <LeftImg src={item.image} />
+                        </LeftImage>
+                        <ProfDetails>
+                            <ProfName>{item.name}</ProfName>
+                            <FollowCount>
+                                {item.followers} followers
+                            </FollowCount>
+                        </ProfDetails>
+                    </LeftDiv>
+                    {item.is_followed ? (
+                        <FollowBtn onClick={() => updateProfile(item)}>
+                            Unfollow
+                        </FollowBtn>
+                    ) : (
+                        <FollowBtn onClick={() => updateProfile(item)}>
+                            Follow
+                        </FollowBtn>
+                    )}
+                </ProfileDetails>
+            );
+        });
     };
     return (
         <RightSection>
@@ -177,9 +187,13 @@ function RightContainer() {
 export default RightContainer;
 
 const RightSection = styled.div`
-    width: 20%;
+    height: 100vh;
     border-left: 1px solid #a6a5a5;
     padding: 35px 20px 0;
+    @media all and (max-width: 980px) {
+        border-left: none;
+        height: fit-content;
+    }
 `;
 
 const RightTop = styled.div``;
@@ -214,6 +228,9 @@ const FriendProfList = styled.li`
 `;
 const FriendProfImage = styled.div`
     width: 40px;
+    @media all and (max-width: 980px) {
+        width: 60px;
+    }
 `;
 const FriendProfImg = styled.img`
     width: 100%;
@@ -224,6 +241,9 @@ const FriendProfName = styled.h5`
     font-size: 12px;
     color: #a6a5a5;
     text-align: center;
+    @media all and (max-width: 980px) {
+        font-size: 15px;
+    }
 `;
 
 const RightMiddle = styled.div``;
@@ -250,6 +270,9 @@ const LeftDiv = styled.div`
 const LeftImage = styled.div`
     width: 38px;
     margin-right: 10px;
+    @media all and (max-width: 980px) {
+        width: 55px;
+    }
 `;
 const LeftImg = styled.img`
     width: 100%;
@@ -260,10 +283,16 @@ const ProfDetails = styled.div``;
 const ProfName = styled.h4`
     font-size: 14px;
     font-weight: 500;
+    @media all and (max-width: 980px) {
+        font-size: 18px;
+    }
 `;
 const FollowCount = styled.h5`
     font-size: 11px;
     color: #9e9696;
+    @media all and (max-width: 980px) {
+        font-size: 15px;
+    }
 `;
 const FollowBtn = styled.button`
     border-radius: 50px;
@@ -273,6 +302,9 @@ const FollowBtn = styled.button`
     &:hover {
         background-color: #21282c;
         color: #f6f5f4;
+    }
+    @media all and (max-width: 980px) {
+        padding: 10px 40px;
     }
 `;
 
@@ -286,8 +318,11 @@ const MusicHeading = styled.h3`
     font-size: 25px;
     font-weight: 700;
     color: #fff;
-    width: 80%;
+    width: 85%;
     padding: 20px;
+    @media all and (max-width: 1280px) {
+        width: 100%;
+    }
 `;
 const MusicControls = styled.div`
     background: rgba(217, 217, 217, 0.5);
@@ -330,6 +365,9 @@ const RunningTime = styled.h3`
         position: absolute;
         bottom: 7px;
         left: 50px;
+        @media all and (max-width: 980px) {
+            width: 390px;
+        }
     }
 `;
 const TotalDuration = styled.h3`
@@ -344,5 +382,6 @@ const TotalDuration = styled.h3`
         position: absolute;
         bottom: 7px;
         right: 50px;
+        width: 140px;
     }
 `;
