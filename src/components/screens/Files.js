@@ -1,9 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 
-function ComingSoon() {
+function Files() {
     return (
         <>
+            <Helmet>
+                <title>Podcast | Files</title>
+            </Helmet>
             <Coming>
                 <Heading>Coming Soon</Heading>
             </Coming>
@@ -11,18 +15,18 @@ function ComingSoon() {
     );
 }
 
-export default ComingSoon;
+export default Files;
 
-const Coming = styled.h1`
+const Coming = styled.div`
     text-align: center;
-    width: 50%;
-    /* height: 50vh; */
     font-weight: 700;
     font-size: 50px;
-    /* border-left: 1px solid #d9d9d9; */
+    border-right: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    height: 100vh;
+    width: 95%;
 `;
 
 const Heading = styled.h1`
-    /* width: 80%; */
     margin: auto;
 `;

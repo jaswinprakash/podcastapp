@@ -368,6 +368,9 @@ const RunningTime = styled.h3`
         @media all and (max-width: 980px) {
             width: 390px;
         }
+        @media all and (max-width: 640px) {
+            width: 200px;
+        }
     }
 `;
 const TotalDuration = styled.h3`

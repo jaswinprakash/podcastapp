@@ -1,230 +1,236 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import BgImg from "../../assets/images/Frame3466911.png";
 
 function MiddleContainer() {
     return (
-        <MiddleSection>
-            <Heading>
-                <MainTitle>Discover</MainTitle>
-                <SearchContainer>
-                    <SearchText type="search" placeholder="Search..." />
-                    <SearchLogo>
-                        <SearchImg
-                            src={
-                                require("../../assets/images/Property 1=search.svg")
-                                    .default
-                            }
-                        />
-                    </SearchLogo>
-                </SearchContainer>
-            </Heading>
-            <Spotlight>
-                <LeftContent>
-                    <MainText>Listen to the people's voice</MainText>
-                    <BottomElement>
-                        <Playing>
-                            <PlayingImage>
-                                <PlayingImg
-                                    src={
-                                        require("../../assets/images/Property 1=melody w.svg")
-                                            .default
-                                    }
-                                />
-                            </PlayingImage>
-                            <PlayingText>playing</PlayingText>
-                        </Playing>
-                        <PlayLater>
-                            <PlayLaterImage>
-                                <PlayLaterImg
-                                    src={
-                                        require("../../assets/images/Property 1=music w.svg")
-                                            .default
-                                    }
-                                />
-                            </PlayLaterImage>
-                            <PlayLaterTxt>play later</PlayLaterTxt>
-                        </PlayLater>
-                    </BottomElement>
-                </LeftContent>
-                <RightContent>
-                    <SpotlightProfileImage>
-                        <SpotProfImg
-                            src={require("../../assets/images/Frame 3466917.png")}
-                        />
-                    </SpotlightProfileImage>
-                    <SpotContents>
-                        <SpotProfName>Jason Albert</SpotProfName>
-                        <SpotFollowers>200,456 followers</SpotFollowers>
-                    </SpotContents>
-                    <SpotFollowBtn>Follow</SpotFollowBtn>
-                </RightContent>
-            </Spotlight>
-            <CategoryContainer>
-                <CategoryTop>
-                    <CategoryText>Category</CategoryText>
-                    <SeeAllTxt>See All</SeeAllTxt>
-                </CategoryTop>
-                <CategoryBottom>
-                    <CategorySelection>
-                        <CategoryImage>
-                            <CategoryImg
+        <>
+            <Helmet>
+                <title>Podcast | Home</title>
+            </Helmet>
+            <MiddleSection>
+                <Heading>
+                    <MainTitle>Discover</MainTitle>
+                    <SearchContainer>
+                        <SearchText type="search" placeholder="Search..." />
+                        <SearchLogo>
+                            <SearchImg
                                 src={
-                                    require("../../assets/images/Property 1=profile b.svg")
+                                    require("../../assets/images/Property 1=search.svg")
                                         .default
                                 }
                             />
-                        </CategoryImage>
-                        <CategoryDetails>
-                            <CategoryName>Social</CategoryName>
-                            <Count>134+</Count>
-                        </CategoryDetails>
-                    </CategorySelection>
-                    <CategorySelection>
-                        <CategoryImage>
-                            <CategoryImg
-                                src={
-                                    require("../../assets/images/Property 1=map b.svg")
-                                        .default
-                                }
-                            />
-                        </CategoryImage>
-                        <CategoryDetails>
-                            <CategoryName>Travel</CategoryName>
-                            <Count>243+</Count>
-                        </CategoryDetails>
-                    </CategorySelection>
-                    <CategorySelection>
-                        <CategoryImage>
-                            <CategoryImg
-                                src={
-                                    require("../../assets/images/Property 1=qoute b.svg")
-                                        .default
-                                }
-                            />
-                        </CategoryImage>
-                        <CategoryDetails>
-                            <CategoryName>Insight</CategoryName>
-                            <Count>150+</Count>
-                        </CategoryDetails>
-                    </CategorySelection>
-                    <CategorySelection>
-                        <CategoryImage>
-                            <CategoryImg
-                                src={
-                                    require("../../assets/images/Property 1=note b.svg")
-                                        .default
-                                }
-                            />
-                        </CategoryImage>
-                        <CategoryDetails>
-                            <CategoryName>Profession</CategoryName>
-                            <Count>120+</Count>
-                        </CategoryDetails>
-                    </CategorySelection>
-                    <CategorySelection>
-                        <CategoryImage>
-                            <CategoryImg
-                                src={
-                                    require("../../assets/images/Property 1=reward b.svg")
-                                        .default
-                                }
-                            />
-                        </CategoryImage>
-                        <CategoryDetails>
-                            <CategoryName>Sport</CategoryName>
-                            <Count>321+</Count>
-                        </CategoryDetails>
-                    </CategorySelection>
-                </CategoryBottom>
-            </CategoryContainer>
-            <PopularTop>
-                <PopularTxt>Most popular</PopularTxt>
-                <SeeAllTxt>See All</SeeAllTxt>
-            </PopularTop>
-            <PopularBottomList>
-                <PopularBottom>
-                    <PopProfileArea>
-                        <SerialNum>01</SerialNum>
-                        <PopularProfile>
-                            <PopProfImg
+                        </SearchLogo>
+                    </SearchContainer>
+                </Heading>
+                <Spotlight>
+                    <LeftContent>
+                        <MainText>Listen to the people's voice</MainText>
+                        <BottomElement>
+                            <Playing>
+                                <PlayingImage>
+                                    <PlayingImg
+                                        src={
+                                            require("../../assets/images/Property 1=melody w.svg")
+                                                .default
+                                        }
+                                    />
+                                </PlayingImage>
+                                <PlayingText>playing</PlayingText>
+                            </Playing>
+                            <PlayLater>
+                                <PlayLaterImage>
+                                    <PlayLaterImg
+                                        src={
+                                            require("../../assets/images/Property 1=music w.svg")
+                                                .default
+                                        }
+                                    />
+                                </PlayLaterImage>
+                                <PlayLaterTxt>play later</PlayLaterTxt>
+                            </PlayLater>
+                        </BottomElement>
+                    </LeftContent>
+                    <RightContent>
+                        <SpotlightProfileImage>
+                            <SpotProfImg
                                 src={require("../../assets/images/Frame 3466917.png")}
                             />
-                        </PopularProfile>
-                        <ArtistDetails>
-                            <PopularPlay>
-                                How to be a productive person
-                            </PopularPlay>
-                            <PopArtist>Johnson alert</PopArtist>
-                        </ArtistDetails>
-                    </PopProfileArea>
-                    <PopCountArea>
-                        <CountAreaLeft>
-                            <PopSound>
-                                <PopSoundImg
+                        </SpotlightProfileImage>
+                        <SpotContents>
+                            <SpotProfName>Jason Albert</SpotProfName>
+                            <SpotFollowers>200,456 followers</SpotFollowers>
+                        </SpotContents>
+                        <SpotFollowBtn>Follow</SpotFollowBtn>
+                    </RightContent>
+                </Spotlight>
+                <CategoryContainer>
+                    <CategoryTop>
+                        <CategoryText>Category</CategoryText>
+                        <SeeAllTxt>See All</SeeAllTxt>
+                    </CategoryTop>
+                    <CategoryBottom>
+                        <CategorySelection>
+                            <CategoryImage>
+                                <CategoryImg
                                     src={
-                                        require("../../assets/images/Property 1=sound.svg")
+                                        require("../../assets/images/Property 1=profile b.svg")
                                             .default
                                     }
                                 />
-                            </PopSound>
-                            <PopFollow>100,045</PopFollow>
-                        </CountAreaLeft>
-                        <CountAreaRight>
-                            <PopTimer>
-                                <PopTimerImg
+                            </CategoryImage>
+                            <CategoryDetails>
+                                <CategoryName>Social</CategoryName>
+                                <Count>134+</Count>
+                            </CategoryDetails>
+                        </CategorySelection>
+                        <CategorySelection>
+                            <CategoryImage>
+                                <CategoryImg
                                     src={
-                                        require("../../assets/images/Property 1=alarm.svg")
+                                        require("../../assets/images/Property 1=map b.svg")
                                             .default
                                     }
                                 />
-                            </PopTimer>
-                            <Duration>04:30</Duration>
-                        </CountAreaRight>
-                    </PopCountArea>
-                </PopularBottom>
-                <PopularBottom>
-                    <PopProfileArea>
-                        <SerialNum>02</SerialNum>
-                        <PopularProfile>
-                            <PopProfImg
-                                src={require("../../assets/images/Frame 3466915.png")}
-                            />
-                        </PopularProfile>
-                        <ArtistDetails>
-                            <PopularPlay>
-                                How to be a productive person
-                            </PopularPlay>
-                            <PopArtist>Gabriel adim</PopArtist>
-                        </ArtistDetails>
-                    </PopProfileArea>
-                    <PopCountArea>
-                        <CountAreaLeft>
-                            <PopSound>
-                                <PopSoundImg
+                            </CategoryImage>
+                            <CategoryDetails>
+                                <CategoryName>Travel</CategoryName>
+                                <Count>243+</Count>
+                            </CategoryDetails>
+                        </CategorySelection>
+                        <CategorySelection>
+                            <CategoryImage>
+                                <CategoryImg
                                     src={
-                                        require("../../assets/images/Property 1=sound.svg")
+                                        require("../../assets/images/Property 1=qoute b.svg")
                                             .default
                                     }
                                 />
-                            </PopSound>
-                            <PopFollow>900,000</PopFollow>
-                        </CountAreaLeft>
-                        <CountAreaRight>
-                            <PopTimer>
-                                <PopTimerImg
+                            </CategoryImage>
+                            <CategoryDetails>
+                                <CategoryName>Insight</CategoryName>
+                                <Count>150+</Count>
+                            </CategoryDetails>
+                        </CategorySelection>
+                        <CategorySelection>
+                            <CategoryImage>
+                                <CategoryImg
                                     src={
-                                        require("../../assets/images/Property 1=alarm.svg")
+                                        require("../../assets/images/Property 1=note b.svg")
                                             .default
                                     }
                                 />
-                            </PopTimer>
-                            <Duration>03:40</Duration>
-                        </CountAreaRight>
-                    </PopCountArea>
-                </PopularBottom>
-            </PopularBottomList>
-        </MiddleSection>
+                            </CategoryImage>
+                            <CategoryDetails>
+                                <CategoryName>Profession</CategoryName>
+                                <Count>120+</Count>
+                            </CategoryDetails>
+                        </CategorySelection>
+                        <CategorySelection>
+                            <CategoryImage>
+                                <CategoryImg
+                                    src={
+                                        require("../../assets/images/Property 1=reward b.svg")
+                                            .default
+                                    }
+                                />
+                            </CategoryImage>
+                            <CategoryDetails>
+                                <CategoryName>Sport</CategoryName>
+                                <Count>321+</Count>
+                            </CategoryDetails>
+                        </CategorySelection>
+                    </CategoryBottom>
+                </CategoryContainer>
+                <PopularTop>
+                    <PopularTxt>Most popular</PopularTxt>
+                    <SeeAllTxt>See All</SeeAllTxt>
+                </PopularTop>
+                <PopularBottomList>
+                    <PopularBottom>
+                        <PopProfileArea>
+                            <SerialNum>01</SerialNum>
+                            <PopularProfile>
+                                <PopProfImg
+                                    src={require("../../assets/images/Frame 3466917.png")}
+                                />
+                            </PopularProfile>
+                            <ArtistDetails>
+                                <PopularPlay>
+                                    How to be a productive person
+                                </PopularPlay>
+                                <PopArtist>Johnson alert</PopArtist>
+                            </ArtistDetails>
+                        </PopProfileArea>
+                        <PopCountArea>
+                            <CountAreaLeft>
+                                <PopSound>
+                                    <PopSoundImg
+                                        src={
+                                            require("../../assets/images/Property 1=sound.svg")
+                                                .default
+                                        }
+                                    />
+                                </PopSound>
+                                <PopFollow>100,045</PopFollow>
+                            </CountAreaLeft>
+                            <CountAreaRight>
+                                <PopTimer>
+                                    <PopTimerImg
+                                        src={
+                                            require("../../assets/images/Property 1=alarm.svg")
+                                                .default
+                                        }
+                                    />
+                                </PopTimer>
+                                <Duration>04:30</Duration>
+                            </CountAreaRight>
+                        </PopCountArea>
+                    </PopularBottom>
+                    <PopularBottom>
+                        <PopProfileArea>
+                            <SerialNum>02</SerialNum>
+                            <PopularProfile>
+                                <PopProfImg
+                                    src={require("../../assets/images/Frame 3466915.png")}
+                                />
+                            </PopularProfile>
+                            <ArtistDetails>
+                                <PopularPlay>
+                                    How to be a productive person
+                                </PopularPlay>
+                                <PopArtist>Gabriel adim</PopArtist>
+                            </ArtistDetails>
+                        </PopProfileArea>
+                        <PopCountArea>
+                            <CountAreaLeft>
+                                <PopSound>
+                                    <PopSoundImg
+                                        src={
+                                            require("../../assets/images/Property 1=sound.svg")
+                                                .default
+                                        }
+                                    />
+                                </PopSound>
+                                <PopFollow>900,000</PopFollow>
+                            </CountAreaLeft>
+                            <CountAreaRight>
+                                <PopTimer>
+                                    <PopTimerImg
+                                        src={
+                                            require("../../assets/images/Property 1=alarm.svg")
+                                                .default
+                                        }
+                                    />
+                                </PopTimer>
+                                <Duration>03:40</Duration>
+                            </CountAreaRight>
+                        </PopCountArea>
+                    </PopularBottom>
+                </PopularBottomList>
+            </MiddleSection>
+        </>
     );
 }
 
@@ -247,6 +253,9 @@ const Heading = styled.div`
 const MainTitle = styled.h1`
     font-size: 60px;
     font-weight: 700;
+    @media all and (max-width: 768px) {
+        font-size: 40px;
+    }
 `;
 const SearchContainer = styled.form`
     display: flex;
@@ -256,6 +265,9 @@ const SearchContainer = styled.form`
     border-radius: 50px;
     padding: 5px 10px;
     width: 300px;
+    @media all and (max-width: 768px) {
+        display: none;
+    }
 `;
 const SearchText = styled.input``;
 const SearchLogo = styled.button`
@@ -273,6 +285,9 @@ const Spotlight = styled.div`
     background: url(${BgImg}) no-repeat;
     background-size: cover;
     padding: 20px;
+    @media all and (max-width: 640px) {
+        flex-wrap: wrap;
+    }
 `;
 
 const LeftContent = styled.div``;
@@ -282,6 +297,18 @@ const MainText = styled.h2`
     color: #fff;
     width: 80%;
     margin-bottom: 100px;
+    @media all and (max-width: 768px) {
+        font-size: 30px;
+    }
+    @media all and (max-width: 768px) {
+        margin-bottom: 50px;
+    }
+    @media all and (max-width: 640px) {
+        font-size: 24px;
+    }
+    @media all and (max-width: 640px) {
+        margin-bottom: 20px;
+    }
 `;
 
 const BottomElement = styled.div`
@@ -294,6 +321,15 @@ const BottomElement = styled.div`
     @media all and (max-width: 1080px) {
         width: 60%;
     }
+    @media all and (max-width: 768px) {
+        width: 80%;
+    }
+    @media all and (max-width: 640px) {
+        width: 60%;
+    }
+    @media all and (max-width: 640px) {
+        margin-bottom: 20px;
+    }
 `;
 const Playing = styled.div`
     background: rgba(217, 217, 217, 0.5);
@@ -304,11 +340,17 @@ const Playing = styled.div`
     border-radius: 50px;
     width: 90px;
     cursor: pointer;
+    @media all and (max-width: 640px) {
+        width: 84px;
+    }
 `;
 const PlayingText = styled.h4`
     font-size: 14px;
     font-weight: 500;
     color: #fff;
+    @media all and (max-width: 640px) {
+        font-size: 12px;
+    }
 `;
 const PlayingImage = styled.div`
     width: 15px;
@@ -327,11 +369,17 @@ const PlayLater = styled.div`
     border-radius: 50px;
     width: 100px;
     cursor: pointer;
+    @media all and (max-width: 640px) {
+        width: 93px;
+    }
 `;
 const PlayLaterTxt = styled.h4`
     font-size: 14px;
     font-weight: 500;
     color: #fff;
+    @media all and (max-width: 640px) {
+        font-size: 12px;
+    }
 `;
 const PlayLaterImage = styled.div`
     width: 15px;
@@ -361,6 +409,9 @@ const SpotlightProfileImage = styled.div`
     width: 30px;
     margin-right: 10px;
     cursor: pointer;
+    @media all and (max-width: 768px) {
+        width: 45px;
+    }
 `;
 const SpotProfImg = styled.img`
     width: 100%;
@@ -402,6 +453,9 @@ const CategoryText = styled.h2`
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 20px;
+    @media all and (max-width: 768px) {
+        font-size: 28px;
+    }
 `;
 const SeeAllTxt = styled.h3`
     font-size: 17px;
@@ -414,12 +468,24 @@ const CategoryBottom = styled.ul`
     display: flex;
     justify-content: space-between;
     margin: 20px 0 30px;
+    @media all and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
+    @media all and (max-width: 640px) {
+        width: 50%;
+    }
 `;
 const CategorySelection = styled.li`
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    @media all and (max-width: 768px) {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 `;
 const CategoryImage = styled.div`
     width: 45px;
@@ -456,6 +522,9 @@ const PopularTxt = styled.h2`
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 20px;
+    @media all and (max-width: 768px) {
+        font-size: 28px;
+    }
 `;
 
 const PopularBottomList = styled.ul``;
@@ -488,6 +557,12 @@ const PopProfileArea = styled.div`
     @media all and (max-width: 980px) {
         width: 55%;
     }
+    @media all and (max-width: 768px) {
+        width: 60%;
+    }
+    @media all and (max-width: 640px) {
+        width: 74%;
+    }
 `;
 const SerialNum = styled.h3`
     font-size: 13px;
@@ -500,6 +575,9 @@ const PopularProfile = styled.div`
     @media all and (max-width: 980px) {
         width: 55px;
     }
+    @media all and (max-width: 768px) {
+        width: 50px;
+    }
 `;
 const PopProfImg = styled.img`
     display: block;
@@ -511,6 +589,12 @@ const PopularPlay = styled.h4`
     font-weight: 700;
     @media all and (max-width: 980px) {
         font-size: 17px;
+    }
+    @media all and (max-width: 768px) {
+        font-size: 15px;
+    }
+    @media all and (max-width: 640px) {
+        font-size: 13px;
     }
 `;
 const PopArtist = styled.h5`
@@ -525,11 +609,17 @@ const PopCountArea = styled.div`
     display: flex;
     width: 30%;
     justify-content: space-between;
+    @media all and (max-width: 768px) {
+        width: 20%;
+    }
 `;
 
 const CountAreaLeft = styled.div`
     display: flex;
     align-items: center;
+    @media all and (max-width: 768px) {
+        display: none;
+    }
 `;
 const PopSound = styled.div`
     width: 30px;

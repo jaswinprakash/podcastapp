@@ -96,6 +96,21 @@ const SidBarContents = styled.li`
     &&:first-child {
         margin-top: 40px;
     }
+    @media all and (max-width: 1080px) {
+        width: 33px;
+    }
+    @media all and (max-width: 980px) {
+        width: 31px;
+    }
+    @media all and (max-width: 980px) {
+        width: 29px;
+    }
+    @media all and (max-width: 768px) {
+        width: 27px;
+    }
+    @media all and (max-width: 640px) {
+        width: 25px;
+    }
 `;
 const SideBarImg = styled.img`
     display: block;
