@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import MusicBg from "../../assets/images/Frame3466913.png";
 
 function RightContainer() {
-    const [isFollow, setFollow] = useState(false);
-    const [profile, setProfile] = useState([
+    const [isFollow, setFollow] = useState(null);
+    const profile = [
         {
             id: 1,
             image: require("../../assets/images/Frame 3466914.png"),
@@ -29,21 +29,9 @@ function RightContainer() {
             name: "Daniel Walied",
             followers: "200,456",
         },
-    ]);
+    ];
 
-    const [followerId, setFollowerId] = useState(0);
-
-    const followFunction = (id) => {
-        setFollowerId(id);
-        setFollow(!isFollow);
-
-        // console.log(isFollow);
-        // console.log(followerId);
-    };
-
-    useEffect(() => {
-        followFunction();
-    }, []);
+    
 
     const renderProfile = () => {
         return profile.map((item) => (
@@ -57,10 +45,15 @@ function RightContainer() {
                         <FollowCount>{item.followers} followers</FollowCount>
                     </ProfDetails>
                 </LeftDiv>
-                <FollowBtn onClick={() => followFunction(item.id)}>
-                    Following
-                </FollowBtn>
-                
+                {item.id === isFollow ? (
+                    <FollowBtn onClick={(e) => (e ? setFollow(null) : null)}>
+                        Unfollow
+                    </FollowBtn>
+                ) : (
+                    <FollowBtn onClick={(e) => (e ? setFollow(item.id) : null)}>
+                        Follow
+                    </FollowBtn>
+                )}
             </ProfileDetails>
         ));
     };
