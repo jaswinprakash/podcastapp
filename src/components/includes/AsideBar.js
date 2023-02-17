@@ -88,11 +88,17 @@ const LeftContainer = styled.ul`
         height: fit-content;
         border-right: none;
     }
+    @media all and (max-width: 480px) {
+        width: 10%;
+    }
 `;
 
 const SidBarContents = styled.li`
     width: 35px;
     margin-bottom: 30px;
+    &:hover {
+        filter: invert();
+    }
     &&:first-child {
         margin-top: 40px;
     }
@@ -110,6 +116,12 @@ const SidBarContents = styled.li`
     }
     @media all and (max-width: 640px) {
         width: 25px;
+    }
+    @media all and (max-width: 480px) {
+        width: 20px;
+    }
+    @media all and (max-width: 360px) {
+        width: 18px;
     }
 `;
 const SideBarImg = styled.img`

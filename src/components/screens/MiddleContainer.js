@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import BgImg from "../../assets/images/Frame3466911.png";
 
 function MiddleContainer() {
+    const [follow, setFollow] = useState(false);
     return (
         <>
             <Helmet>
@@ -62,7 +63,18 @@ function MiddleContainer() {
                             <SpotProfName>Jason Albert</SpotProfName>
                             <SpotFollowers>200,456 followers</SpotFollowers>
                         </SpotContents>
-                        <SpotFollowBtn>Follow</SpotFollowBtn>
+                        {follow ? (
+                            <SpotFollowBtn
+                                className={"activebtn"}
+                                onClick={() => setFollow(false)}
+                            >
+                                Unfollow
+                            </SpotFollowBtn>
+                        ) : (
+                            <SpotFollowBtn onClick={() => setFollow(true)}>
+                                Follow
+                            </SpotFollowBtn>
+                        )}
                     </RightContent>
                 </Spotlight>
                 <CategoryContainer>
@@ -256,6 +268,9 @@ const MainTitle = styled.h1`
     @media all and (max-width: 768px) {
         font-size: 40px;
     }
+    @media all and (max-width: 360px) {
+        font-size: 35px;
+    }
 `;
 const SearchContainer = styled.form`
     display: flex;
@@ -309,6 +324,9 @@ const MainText = styled.h2`
     @media all and (max-width: 640px) {
         margin-bottom: 20px;
     }
+    @media all and (max-width: 360px) {
+        font-size: 20px;
+    }
 `;
 
 const BottomElement = styled.div`
@@ -326,9 +344,10 @@ const BottomElement = styled.div`
     }
     @media all and (max-width: 640px) {
         width: 60%;
-    }
-    @media all and (max-width: 640px) {
         margin-bottom: 20px;
+    }
+    @media all and (max-width: 480px) {
+        width: 100%;
     }
 `;
 const Playing = styled.div`
@@ -340,6 +359,10 @@ const Playing = styled.div`
     border-radius: 50px;
     width: 90px;
     cursor: pointer;
+    &:hover {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
     @media all and (max-width: 640px) {
         width: 84px;
     }
@@ -369,6 +392,10 @@ const PlayLater = styled.div`
     border-radius: 50px;
     width: 100px;
     cursor: pointer;
+    &:hover {
+        background-color: #21282c;
+        color: #f6f5f4;
+    }
     @media all and (max-width: 640px) {
         width: 93px;
     }
@@ -398,11 +425,25 @@ const RightContent = styled.div`
     width: 230px;
     height: 60px;
     padding: 0 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(120, 114, 114, 0.5);
+        color: #f6f5f4;
+    }
     @media all and (max-width: 1280px) {
         width: 278px;
     }
     @media all and (max-width: 1080px) {
         width: 327px;
+    }
+    @media all and (max-width: 1080px) {
+        width: 327px;
+    }
+    @media all and (max-width: 768px) {
+        width: 338px;
+    }
+    @media all and (max-width: 360px) {
+        display: none;
     }
 `;
 const SpotlightProfileImage = styled.div`
@@ -418,7 +459,8 @@ const SpotProfImg = styled.img`
     display: block;
     border-radius: 50%;
 `;
-const SpotContents = styled.div``;
+const SpotContents = styled.div`
+`;
 const SpotProfName = styled.h4`
     font-size: 13px;
     color: #fff;
@@ -435,6 +477,10 @@ const SpotFollowBtn = styled.button`
     color: #9e9696;
     font-weight: 500;
     cursor: pointer;
+    &.activebtn {
+        background: #000;
+        color: #fff;
+    }
     &:hover {
         background-color: #21282c;
         color: #f6f5f4;
@@ -456,12 +502,21 @@ const CategoryText = styled.h2`
     @media all and (max-width: 768px) {
         font-size: 28px;
     }
+    @media all and (max-width: 480px) {
+        margin-bottom: 5px;
+    }
+    @media all and (max-width: 360px) {
+        font-size: 25px;
+    }
 `;
 const SeeAllTxt = styled.h3`
     font-size: 17px;
     font-weight: 500;
     margin-bottom: 10px;
     cursor: pointer;
+    @media all and (max-width: 480px) {
+        display: none;
+    }
 `;
 
 const CategoryBottom = styled.ul`
@@ -525,6 +580,12 @@ const PopularTxt = styled.h2`
     @media all and (max-width: 768px) {
         font-size: 28px;
     }
+    @media all and (max-width: 480px) {
+        margin-bottom: 5px;
+    }
+    @media all and (max-width: 360px) {
+        font-size: 25px;
+    }
 `;
 
 const PopularBottomList = styled.ul``;
@@ -563,11 +624,17 @@ const PopProfileArea = styled.div`
     @media all and (max-width: 640px) {
         width: 74%;
     }
+    @media all and (max-width: 480px) {
+        width: 100%;
+    }
 `;
 const SerialNum = styled.h3`
     font-size: 13px;
     @media all and (max-width: 980px) {
         font-size: 15px;
+    }
+    @media all and (max-width: 480px) {
+        margin-right: 5px;
     }
 `;
 const PopularProfile = styled.div`
@@ -577,6 +644,9 @@ const PopularProfile = styled.div`
     }
     @media all and (max-width: 768px) {
         width: 50px;
+    }
+    @media all and (max-width: 480px) {
+        margin-right: 5px;
     }
 `;
 const PopProfImg = styled.img`
@@ -595,6 +665,12 @@ const PopularPlay = styled.h4`
     }
     @media all and (max-width: 640px) {
         font-size: 13px;
+    }
+    @media all and (max-width: 480px) {
+        font-size: 16px;
+    }
+    @media all and (max-width: 360px) {
+        font-size: 11px;
     }
 `;
 const PopArtist = styled.h5`
@@ -637,6 +713,9 @@ const PopFollow = styled.h3`
 const CountAreaRight = styled.div`
     display: flex;
     align-items: center;
+    @media all and (max-width: 480px) {
+        display: none;
+    }
 `;
 const PopTimer = styled.div`
     width: 30px;

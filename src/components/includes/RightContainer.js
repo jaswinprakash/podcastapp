@@ -34,7 +34,7 @@ function RightContainer() {
         },
     ]);
 
-    let updateProfile = (item) => {
+    const updateProfile = (item) => {
         item.is_followed = !item.is_followed;
         setProfile([...profile]);
     };
@@ -55,7 +55,10 @@ function RightContainer() {
                         </ProfDetails>
                     </LeftDiv>
                     {item.is_followed ? (
-                        <FollowBtn onClick={() => updateProfile(item)}>
+                        <FollowBtn
+                            className={"activebtn"}
+                            onClick={() => updateProfile(item)}
+                        >
                             Unfollow
                         </FollowBtn>
                     ) : (
@@ -207,6 +210,9 @@ const FriendListTxt = styled.h2`
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 20px;
+    @media all and (max-width: 480px) {
+        font-size: 28px;
+    }
 `;
 const OptionsMenu = styled.div`
     width: 35px;
@@ -221,15 +227,30 @@ const FriendProfile = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media all and (max-width: 480px) {
+        flex-wrap: wrap;
+        width: 99%;
+    }
+    @media all and (max-width: 360px) {
+        width: 50%;
+    }
 `;
 const FriendProfList = styled.li`
     margin: 10px 0 20px;
     cursor: pointer;
+    @media all and (max-width: 360px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 `;
 const FriendProfImage = styled.div`
     width: 40px;
     @media all and (max-width: 980px) {
         width: 60px;
+    }
+    @media all and (max-width: 360px) {
+        margin-right: 20px;
     }
 `;
 const FriendProfImg = styled.img`
@@ -244,6 +265,9 @@ const FriendProfName = styled.h5`
     @media all and (max-width: 980px) {
         font-size: 15px;
     }
+    @media all and (max-width: 360px) {
+        font-size: 17px;
+    }
 `;
 
 const RightMiddle = styled.div``;
@@ -252,6 +276,9 @@ const PodcastHeading = styled.h2`
     margin-bottom: 20px;
     font-size: 32px;
     font-weight: 500;
+    @media all and (max-width: 480px) {
+        font-size: 28px;
+    }
 `;
 const PodcastList = styled.ul`
     border-top: 1px solid #a6a5a5;
@@ -273,6 +300,9 @@ const LeftImage = styled.div`
     @media all and (max-width: 980px) {
         width: 55px;
     }
+    @media all and (max-width: 480px) {
+        width: 50px;
+    }
 `;
 const LeftImg = styled.img`
     width: 100%;
@@ -286,6 +316,12 @@ const ProfName = styled.h4`
     @media all and (max-width: 980px) {
         font-size: 18px;
     }
+    @media all and (max-width: 480px) {
+        font-size: 15px;
+    }
+    @media all and (max-width: 360px) {
+        font-size: 14px;
+    }
 `;
 const FollowCount = styled.h5`
     font-size: 11px;
@@ -293,18 +329,28 @@ const FollowCount = styled.h5`
     @media all and (max-width: 980px) {
         font-size: 15px;
     }
+    @media all and (max-width: 360px) {
+        font-size: 10px;
+    }
 `;
 const FollowBtn = styled.button`
     border-radius: 50px;
     border: 1px solid #9e9696;
     padding: 5px 10px;
     cursor: pointer;
+    &.activebtn {
+        background: #000;
+        color: #fff;
+    }
     &:hover {
         background-color: #21282c;
         color: #f6f5f4;
     }
     @media all and (max-width: 980px) {
         padding: 10px 40px;
+    }
+    @media all and (max-width: 480px) {
+        padding: 5px 10px;
     }
 `;
 
@@ -370,6 +416,12 @@ const RunningTime = styled.h3`
         }
         @media all and (max-width: 640px) {
             width: 200px;
+        }
+        @media all and (max-width: 480px) {
+            width: 150px;
+        }
+        @media all and (max-width: 360px) {
+            width: 83px;
         }
     }
 `;
